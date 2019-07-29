@@ -34,9 +34,9 @@ final class ViewModel {
             DispatchQueue.main.async {
                 self.placeHolders = plHolders
             }
-            
         }
-        
     }
+    
+    
     
 }

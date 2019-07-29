@@ -17,11 +17,6 @@ class CollectionViewCell: UICollectionViewCell {
     
     static let identifier = "CollectionViewCell"
     
-    var place: PlaceHolder?
-    
-    
-    
-    
     
     func configureCollection(with place: PlaceHolder){
         self.title.text = place.title

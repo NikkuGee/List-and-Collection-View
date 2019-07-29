@@ -23,13 +23,12 @@ extension UIViewController {
 
 extension UICollectionViewController {
     
-    func goToNextDetail(with book: PlaceHolder, _ nav: UINavigationController?) {
+    func goToNextDetail(_ nav: UINavigationController?) {
         
-        //        let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        //        detailVC.hidesBottomBarWhenPushed = true
-        //        viewModel.currentBook = book
+        let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailVC.hidesBottomBarWhenPushed = true
         nav?.view.backgroundColor = .white
-        //        nav?.pushViewController(detailVC, animated: true)
+        nav?.pushViewController(detailVC, animated: true)
         
     }
     

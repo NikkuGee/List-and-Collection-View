@@ -80,7 +80,7 @@ extension TableViewController: TableViewModelDelegate {
     
     func updateView() {
         DispatchQueue.main.async {
-            
+            print(viewModel.placeHolders.count)
             self.tableView.reloadData()
         }
     }

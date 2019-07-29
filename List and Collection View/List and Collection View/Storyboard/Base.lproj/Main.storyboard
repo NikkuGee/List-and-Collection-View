@@ -159,35 +159,39 @@
         <!--Collection View Controller-->
         <scene sceneID="yE9-IV-9BK">
             <objects>
-                <collectionViewController restorationIdentifier="CollectionViewController" storyboardIdentifier="CollectionViewController" id="g2S-8l-j8g" customClass="CollectionViewController" customModule="List_and_Collection_View" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="2iI-0L-q6z">
+                <collectionViewController storyboardIdentifier="CollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g2S-8l-j8g" customClass="CollectionViewController" customModule="List_and_Collection_View" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" canCancelContentTouches="NO" dataMode="prototypes" id="2iI-0L-q6z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="U5B-SJ-I7F">
-                            <size key="itemSize" width="140" height="180"/>
+                            <size key="itemSize" width="200" height="350"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCell" reuseIdentifier="CollectionViewCell" id="j8D-Wn-NG7" customClass="CollectionViewCell" customModule="List_and_Collection_View" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="180" height="229"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="180" height="229"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="350"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1mW-ER-f58">
-                                            <rect key="frame" x="15" y="20" width="150" height="150"/>
+                                            <rect key="frame" x="25" y="20" width="150" height="150"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="150" id="eq1-aI-arP"/>
                                                 <constraint firstAttribute="height" constant="150" id="ySH-B5-J10"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YpO-0s-8SI">
-                                            <rect key="frame" x="15" y="174" width="150" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="YpO-0s-8SI">
+                                            <rect key="frame" x="24" y="179" width="150" height="162"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="BRa-5e-jA3"/>
+                                                <constraint firstAttribute="height" constant="162" id="toj-7R-Nlp"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -195,15 +199,15 @@
                                 </view>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="1mW-ER-f58" secondAttribute="trailing" constant="15" id="0NK-Ua-cRA"/>
                                     <constraint firstItem="1mW-ER-f58" firstAttribute="top" secondItem="j8D-Wn-NG7" secondAttribute="top" constant="20" id="6CE-NX-ipn"/>
-                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="YpO-0s-8SI" secondAttribute="bottom" constant="34" id="6hk-Da-ocF"/>
-                                    <constraint firstItem="1mW-ER-f58" firstAttribute="leading" secondItem="j8D-Wn-NG7" secondAttribute="leading" constant="15" id="NKD-Zl-OiE"/>
-                                    <constraint firstAttribute="trailing" secondItem="YpO-0s-8SI" secondAttribute="trailing" constant="15" id="Nuk-go-i70"/>
-                                    <constraint firstItem="YpO-0s-8SI" firstAttribute="leading" secondItem="j8D-Wn-NG7" secondAttribute="leading" constant="15" id="f8R-mm-O5B"/>
-                                    <constraint firstItem="YpO-0s-8SI" firstAttribute="top" secondItem="1mW-ER-f58" secondAttribute="bottom" constant="4" id="fHs-qH-XJ1"/>
+                                    <constraint firstAttribute="trailing" secondItem="1mW-ER-f58" secondAttribute="trailing" constant="25" id="6uz-lY-jxd"/>
+                                    <constraint firstItem="1mW-ER-f58" firstAttribute="leading" secondItem="j8D-Wn-NG7" secondAttribute="leading" constant="25" id="929-t7-aJd"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="YpO-0s-8SI" secondAttribute="trailing" constant="26" id="BGP-cX-cB5"/>
+                                    <constraint firstItem="YpO-0s-8SI" firstAttribute="top" secondItem="1mW-ER-f58" secondAttribute="bottom" constant="9" id="PE4-X5-s68"/>
+                                    <constraint firstItem="YpO-0s-8SI" firstAttribute="leading" secondItem="j8D-Wn-NG7" secondAttribute="leading" constant="24" id="sFh-JA-XCz"/>
+                                    <constraint firstAttribute="bottom" secondItem="YpO-0s-8SI" secondAttribute="bottom" constant="9" id="va3-O8-dgS"/>
                                 </constraints>
-                                <size key="customSize" width="180" height="229"/>
+                                <size key="customSize" width="200" height="350"/>
                                 <connections>
                                     <outlet property="thumbnail" destination="1mW-ER-f58" id="DVZ-sd-bPe"/>
                                     <outlet property="title" destination="YpO-0s-8SI" id="GGP-t2-J18"/>
